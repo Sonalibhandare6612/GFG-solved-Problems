@@ -1,0 +1,37 @@
+# python code 
+
+Q.Longest Palindrome in string.
+
+class Solution:
+    def longestPalin(self, S):
+        # code here
+        max = 1
+        str1 = S[0]
+        n = len(S)
+        for i in range(n):
+            for j in range(i+1+max,n+1):
+                strng = S[i:j]
+                if strng == strng[::-1]:
+                    max = len(strng)
+                str1 = strng
+        return str1        
+                
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+
+    t = int(input())
+
+    for _ in range(t):
+        S = input()
+
+        ob = Solution()
+
+        ans = ob.longestPalin(S)
+
+        print(ans)
+# } Driver Code Ends
