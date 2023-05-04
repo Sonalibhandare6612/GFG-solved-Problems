@@ -15,7 +15,8 @@ def isValid(s):
         for j in i:
             if len(i) > 1 and i[0] == "0":
                 return 0
-    return 1            
+    return 1  
+    
             
 
 
