@@ -1,0 +1,38 @@
+#User function Template for python3
+
+def isValid(s):
+    #code here
+    s = s.split(".")
+    if len(s) != 4:
+        return 0
+    for i in s:
+        if(i.isalpha()) or i == (""):
+            return 0
+        if len(i)>3 or (len(i)>1 and int(i) == 0):
+            return 0
+        if 0 < int(i) > 255:
+            return 0
+        for j in i:
+            if len(i) > 1 and i[0] == "0":
+                return 0
+    return 1            
+            
+
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+    
+if __name__=="__main__":
+    t=int(input())
+    for _ in range(0,t):
+        s=input()
+        if(isValid(s)):
+            print(1)
+        else:
+            print(0)
+    
+
+# } Driver Code Ends
