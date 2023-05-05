@@ -1,0 +1,28 @@
+#User function Template for python3
+
+class Solution:
+    def reverseWords(self, s):
+        # code here
+        str1 = ""
+        S = s.split(".")
+        for i in S:
+            c = len(i)
+            x = i[-1::-1]
+            str1 += x + "."
+        b = len(str1)    
+        return str1[0:b-1:]    
+            
+       
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        s = input().strip()
+        ob = Solution()
+        ans = ob.reverseWords(s)
+        print(ans)
+# } Driver Code Ends
